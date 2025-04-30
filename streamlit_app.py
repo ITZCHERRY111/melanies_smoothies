@@ -4,14 +4,14 @@ import streamlit as st
 from snowflake.snowpark.functions import col
 
 # Write directly to the app
-st.title(f":cup_with_straw: Customize Your Smoothie! :cup_with_straw:")
+streamlit.title(f":cup_with_straw: Customize Your Smoothie! :cup_with_straw:")
 st.write(
   """Choose the fruits you want in your custom Smoothie!.
   """
 )
 
 name_on_order = st.text_input("Name on Smoothie", 'Mohan')
-st.write("The current movie title is", name_on_order)
+st.write("The name on Smoothie is", name_on_order)
 
 #session = get_active_session()
 cnx = st.connection("snowflake")
